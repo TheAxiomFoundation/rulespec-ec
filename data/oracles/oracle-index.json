@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-07-22",
+  "jurisdiction": "ec",
+  "focus": "Ecuadorian tax-benefit surface: personal income tax (LRTI Art. 36), VAT (Art. 65 chain: 12% -> 13% -> 15% applied from April 2024), ICE excises, IESS social insurance contributions, and the Bono de Desarrollo Humano.",
+  "purpose": "Household-level comparison-oracle and supporting-source references for Ecuador Axiom coverage. None of these are legal authority.",
+  "oracle_scope": "A RuleSpec oracle must be an executable, pinned external calculator that accepts household-level inputs and returns household-level tax-benefit outputs comparable to Axiom outputs. Aggregate simulators, distributional reports, parameter documentation, and public model summaries are supporting references only, not oracles.",
+  "oracles": [
+    {
+      "id": "ecuamod",
+      "name": "ECUAMOD",
+      "url": "https://www.wider.unu.edu/about/ecuamod-simulating-tax-and-benefit-policies-development-ecuador",
+      "local_path": "~/.axiom/oracles/southmod/bundle/ (licensed, non-redistributable; never committed)",
+      "commit": null,
+      "model": "ECUAMOD v5.1 (SOUTHMOD; EUROMOD platform)",
+      "dataset": "ENIGHUR 2011/12 + ENEMDU 2019-2022 based input microdata (shipped with the licensed bundle where included)",
+      "role": "Household-level tax-benefit comparison oracle for Ecuador. Policy years 2011-25. Report CR-ECUAMOD-v5.1 (UNU-WIDER).",
+      "coverage": [
+        "personal_income_tax",
+        "vat",
+        "ice_excises",
+        "iess_contributions",
+        "bono_desarrollo_humano",
+        "family_protection_grant",
+        "fuel_subsidies",
+        "household_disposable_income"
+      ],
+      "authority": "wiring_pending",
+      "availability_check": {
+        "checked_at": "2026-07-22",
+        "status": "wiring_pending",
+        "detail": "The locally held licensed SOUTHMOD bundle (see rulespec-tz oracle-index: SOUTHMOD_A4.0; EUROMOD runtime proven on the Ghana and Rwanda lanes) must be inventoried for ECUAMOD EC systems before wiring. Validation frame: ECUAMOD v5.1, policy years 2011-25."
+      },
+      "bundle_sha256": null
+    }
+  ]
+}
