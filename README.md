@@ -9,3 +9,11 @@ All encoded law lives under a single `ec/` namespace. The validation frame is EC
 ## Source Priority
 
 Policy must come from the furthest upstream available source: Registro Oficial texts and official consolidations first (the SRI's LRTI compilations and normative library, the IESS's published Ley de Seguridad Social print, ministry legal-basis records — record the host in manifest metadata), executive decrees and institutional resolutions next, agency guidance only after the governing instrument is identified.
+
+## Listing gates
+
+This repo carries `app_visibility = "experimental"` in `.axiom/registry.toml` and stays out of app surfaces until:
+
+1. The encoded surface covers the flagship calculation (personal income tax gross-to-net for a formal employee) end to end with companion tests.
+2. Oracle parity suites exist and pass against ECUAMOD for the encoded surface.
+3. Citation paths are stable (ley/Codificación-number form against the Registro Oficial prints).
